@@ -9,14 +9,12 @@ namespace Home9
         {
             List<string> list = new List<string>();
 
-            HomeWork.FindFiles("C:\\Users\\Олег\\source\\repos", "*.txt", list);
+            HomeWork.FindFiles("D:\\projects\\example-generator\\Output", "*.txt", list);
 
-            foreach (string file in list)
+            var findLit2 = HomeWork.FindWordInMultiThread(list, "comment:447a2fef-13db-4b73-9b04-c5eb1743ae59");
+            foreach (string word in findLit2)
             {
-                if (HomeWork.FindWord(file, "txt") == true)
-                {
-                    Console.WriteLine(file);
-                }
+                Console.WriteLine(word);
             }
         }
 
